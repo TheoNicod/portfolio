@@ -11,7 +11,7 @@ const Projects: React.FC = () => {
       title: "GOELAN",
       subtitle: t('projects.list.goelan.subtitle'),
       description: t('projects.list.goelan.description'),
-      technologies: ["FastAPI", "LangChain", "MistralAI", "Python", "RAG", "React"],
+      technologies: ["FastAPI", "LangChain", "MistralAI", "Python", "RAG", "React", "Docker"],
       image: "goelan_resized.png",
       demo: "https://goelan.uha.fr",
       paper: "goelan_paper_2025.pdf",
@@ -31,6 +31,17 @@ const Projects: React.FC = () => {
       color: "from-cyan-600 to-cyan-700 dark:from-cyan-500 dark:to-cyan-600"
     },
     {
+      title: "NutriTrack",
+      subtitle: t('projects.list.nutritrack.subtitle'),
+      description: t('projects.list.nutritrack.description'),
+      technologies: ["PHP", "MySQL", "JQuery", "Bootstrap"],
+      image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
+      github: "https://github.com/uha-fr/archiweb_2024_projets_gr04",
+      date: "2024",
+      featured: false,
+      color: "from-amber-600 to-amber-700 dark:from-amber-500 dark:to-amber-600"
+    },
+    {
       title: "AR Lung Visualization",
       subtitle: t('projects.list.aruco.subtitle'),
       description: t('projects.list.aruco.description'),
@@ -41,17 +52,6 @@ const Projects: React.FC = () => {
       featured: false,
       color: "from-blue-700 to-cyan-600 dark:from-blue-600 dark:to-cyan-500"
     },
-    {
-      title: "NutriTrack",
-      subtitle: t('projects.list.nutritrack.subtitle'),
-      description: t('projects.list.nutritrack.description'),
-      technologies: ["PHP", "MySQL", "JQuery", "Bootstrap"],
-      image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
-      github: "https://github.com/uha-fr/archiweb_2024_projets_gr04",
-      date: "2023",
-      featured: false,
-      color: "from-amber-600 to-amber-700 dark:from-amber-500 dark:to-amber-600"
-    }
   ];
 
   return (
@@ -80,7 +80,7 @@ const Projects: React.FC = () => {
               onMouseLeave={() => setHoveredProject(null)}
             >
               {/* Project card */}
-              <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 h-full">
+              <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 h-full flex flex-col">
                 {/* Image section */}
                 <div className="relative h-64 lg:h-80 overflow-hidden">
                   <img
@@ -105,13 +105,13 @@ const Projects: React.FC = () => {
                 </div>
 
                 {/* Content section */}
-                <div className="p-8 space-y-6">
-                  <div>
+                <div className="p-8 flex flex-col flex-1">
+                  <div className="flex-1">
                     <p className="text-gray-700 dark:text-gray-300 text-sm font-medium mb-2">{project.subtitle}</p>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                       {project.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                       {project.description}
                     </p>
                   </div>
@@ -129,7 +129,7 @@ const Projects: React.FC = () => {
                   </div>
 
                   {/* Action buttons */}
-                  <div className="flex space-x-4 pt-2">
+                  <div className="flex space-x-4 pt-6 mt-auto">
                     {project.github && (
                       <a
                         href={project.github}
