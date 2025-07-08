@@ -24,7 +24,7 @@ const Projects: React.FC = () => {
       subtitle: t('projects.list.llm-personalization.subtitle'),
       description: t('projects.list.llm-personalization.description'),
       technologies: ["Python", "Ollama", "RAG", "Fine-tuning", , "Pytorch", "LangChain", "LlamaIndex", "FAISS"],
-      image: "/images/llm.jpeg",
+      image: "llm.jpeg",
       github: "https://github.com/eisenhowair/ProjetLLM",
       date: "2024",
       featured: true,
@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
       subtitle: t('projects.list.aruco.subtitle'),
       description: t('projects.list.aruco.description'),
       technologies: ["Python", "ArUCO", "OpenCV"],
-      image: "images/aruco.png",
+      image: "aruco.png",
       github: "https://github.com/TheoNicod/CXR-Lungs-Augmented-Reality",
       date: "2023",
       featured: false,
@@ -84,7 +84,7 @@ const Projects: React.FC = () => {
                 {/* Image section */}
                 <div className="relative h-64 lg:h-80 overflow-hidden">
                   <img
-                    src={project.image}
+                    src={project.image.startsWith("http") ? project.image : "/portfolio/images/" + project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
@@ -152,7 +152,7 @@ const Projects: React.FC = () => {
                     )}
                     {project.paper && (
                       <a
-                        href={`/public/${project.paper}`}
+                        href={`/portfolio/public/${project.paper}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center space-x-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-4 py-2 hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 relative z-50"
