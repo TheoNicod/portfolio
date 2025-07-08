@@ -1,0 +1,210 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "resume": "Resume"
+  },
+  "theme": {
+    "lightMode": "Light mode",
+    "darkMode": "Dark mode"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Théo",
+    "lastName": "Nicod",
+    "roles": ["Development", "AI", "Project"],
+    "description": "Computer Science Master's student, combining AI development and project management.",
+    "cta": {
+      "projects": "View my work",
+      "resume": "My journey"
+    }
+  },
+  "about": {
+    "title": {
+      "first": "Who am ",
+      "second": "I?"
+    },
+    "story": {
+      "title": "My Story",
+      "paragraphs": [
+        "Passionate about computer science from a young age, I discovered the transformative power of technology. Currently pursuing a Master's in Computer Science, I specialize in developing innovative web and mobile applications.",
+        "My approach combines artistic creativity and technical rigor to create digital experiences that leave a lasting impression. Each project is an opportunity to explore new technological horizons."
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "master": {
+        "title": "Master's in Computer Science",
+        "period": "2023 - 2025",
+        "school": "XYZ University",
+        "description": "Specialization in Artificial Intelligence and Advanced Web Development"
+      },
+      "bachelor": {
+        "title": "Bachelor's in Computer Science",
+        "period": "2020 - 2023",
+        "school": "XYZ University",
+        "description": "Comprehensive training in programming, algorithms, and systems"
+      }
+    },
+    "values": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "Always seeking creative and cutting-edge solutions"
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Constant optimization for exceptional user experiences"
+      },
+      "precision": {
+        "title": "Precision",
+        "description": "Meticulous attention to detail in every line of code"
+      },
+      "learning": {
+        "title": "Learning",
+        "description": "Permanent curiosity and adaptation to new technologies"
+      }
+    },
+    "skills": {
+      "frontend": "Frontend",
+      "backend": "Backend", 
+      "mobile": "Mobile",
+      "tools": "Tools"
+    }
+  },
+  "projects": {
+    "title": {
+      "0": "My ",
+      "1": "Creations"
+    },
+    "subtitle": "Discover my most innovative projects",
+    "featured": "Featured",
+    "cta": "Interested in a collaboration?",
+    "ctaButton": "Contact me",
+    "buttons": {
+      "code": "Code",
+      "view": "View",
+      "paper": "Learn more"
+    },
+    "list": {
+      "goelan": {
+        "subtitle": "AI Chatbot for Student Guidance",
+        "description": "AI-powered conversational agent for academic guidance, enhanced with university-specific contextual information through Retrieval Augmented Generation (RAG)."
+      },
+      "llm-personalization": {
+        "subtitle": "Large Language Model Customization and Deployment",
+        "description": "Discovery and application of different types of large language model customization: prompting, RAG and fine-tuning."
+      },
+      "aruco": {
+        "subtitle": "ArUco Augmented Reality: 3D lung models from infected chest X-rays",
+        "description": "Augmented reality to visualize 3D lung models from infected chest X-rays (CXR). It uses ArUco markers to detect and overlay 3D models on images in real time."
+      },
+      "nutritrack": {
+        "subtitle": "Food management",
+        "description": "NutriTrack is a food tracking app for detailed diet monitoring. Record meals, track nutrition, and improve eating habits for healthier living."
+      }
+    }
+  },
+  "resume": {
+    "title": "My Journey",
+    "subtitle": "Discover my professional evolution and achievements",
+    "downloadButton": "Download Full Resume",
+    "contact": {
+      "title": "Contact"
+    },
+    "skills": {
+      "title": "Skills",
+      "category": {
+        "language_prog": "Programming Languages",
+        "ai": "AI",
+        "tools": "Tools",
+        "language": {
+          "title": "Languages",
+          "french": {
+            "title": "French",
+            "level": "Native"
+          },
+          "english": {
+            "title": "English",
+            "level": "B1-B2"
+          }
+        }
+      }
+    },
+    "experience": {
+      "title": "Professional Experiences",
+      "list": {
+        "goelan": {
+          "title": "AI Developer",
+          "company": "NCU ÉLAN",
+          "period": "Feb 2025 - Dec 2025",
+          "description": "Created an AI conversational agent for student guidance at the University of Haute-Alsace. Developed an intelligent chatbot to assist students with academic orientation and educational choices."
+        },
+        "unsolite": {
+          "title": "Full-Stack Developer Intern",
+          "company": "Unsolite",
+          "period": "Apr 2023 - July 2023",
+          "description": "Continuous development and integration of a SaaS event management solution. Built features including 3D visualization, QR code management, and real-time WebSocket-based chat system."
+        }
+      }
+    },
+    "education": {
+      "title": "Education",
+      "master": {
+        "title": "Master's in Computer Science and ",
+        "place": "University of Haute-Alsace, Besançon, France",
+        "period": "2025",
+        "description": "",
+        "courses": [
+          "2D 3D Scene Analysis and Modeling",
+          "Algorithms and Applications Research Techniques",
+          "Cloud Computing",
+          "Combinatorial Optimization",
+          "Computer Graphics on Mobile Platforms",
+          "Computer Security and Safety",
+          "Data Science",
+          "Decision Support Systems",
+          "Enterprise Technologies",
+          "Geometric Algorithms",
+          "New Technologies Programming",
+          "Software Engineering",
+          "Systems and Networks",
+          "Web Development"
+        ]
+      },
+      "bachelor": {
+        "title": "Bachelor's in Computer Science and Mobile Computing",
+        "place": "University of Franche-Comté, Besançon, France",
+        "period": "2023",
+        "description": "",
+        "courses": [
+          "Algorithms",
+          "Analysis and Modeling",
+          "Computer Architecture",
+          "Database",
+          "Engineering Science",
+          "Language Theory",
+          "Machine Learning",
+          "Mathematics",
+          "Network",
+          "Object-Oriented, Functional and Multi-Paradigm Programming",
+          "Syntactic Analysis",
+          "Web"
+        ]
+      },
+      "bac": {
+        "title": "Baccalaureate in Science",
+        "place": "Lycée Louis Pergaud, Besançon, France",
+        "period": "2019",
+        "description": "",
+        "courses": []
+      }
+    }
+  },
+  "footer": {
+    "copyright": "All rights reserved."
+  }
+}
+
+
+

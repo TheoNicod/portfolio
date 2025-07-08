@@ -1,13 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowDown, Sparkles, Code2, Zap } from 'lucide-react';
+import { ArrowDown, Mail, Github, Linkedin } from 'lucide-react';
+import { useTranslation } from '../contexts/LanguageContext';
+import { sendEmail } from '../encodeEmail';
 
 const Hero: React.FC = () => {
+  const { t } = useTranslation();
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const words = ['Développeur', 'Créatif', 'Innovateur', 'Étudiant'];
+  const words = [
+    t('hero.roles.0'),
+    t('hero.roles.1'),
+    t('hero.roles.2'),
+  ];
 
   useEffect(() => {
     const handleTyping = () => {
@@ -22,7 +29,7 @@ const Hero: React.FC = () => {
       setTypingSpeed(isDeleting ? 30 : 150);
 
       if (!isDeleting && text === fullText) {
-        setTimeout(() => setIsDeleting(true), 500);
+        setTimeout(() => setIsDeleting(true), 1500);
       } else if (isDeleting && text === '') {
         setIsDeleting(false);
         setLoopNum(loopNum + 1);
@@ -33,82 +40,112 @@ const Hero: React.FC = () => {
     return () => clearTimeout(timer);
   }, [text, isDeleting, loopNum, typingSpeed, words]);
 
-  const scrollToAbout = () => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToProjects = () => {
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative px-6 lg:px-20">
-      <div className="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
-        {/* Left side - Text content */}
-        <div className="space-y-8 lg:order-1 order-2">
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3 text-cyan-400">
-              <Sparkles className="w-6 h-6" />
-              <span className="text-lg font-medium">Bonjour, je suis</span>
-            </div>
-            
-            <h1 className="text-5xl lg:text-7xl font-bold">
-              <span className="text-white">Théo</span>
-              <br />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Nicod
-              </span>
-            </h1>
-            
-            <div className="text-2xl lg:text-3xl text-gray-300 h-12">
-              <span className="text-cyan-400">{text}</span>
-              <span className="animate-pulse">|</span>
+    <section id="hero" className="min-h-screen flex items-center justify-center relative px-6 lg:px-20 bg-white dark:bg-gray-900">
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          
+          {/* Left side - Text content */}
+          <div className="space-y-8 lg:order-1 order-2">
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <p className="text-gray-600 dark:text-gray-400 text-lg font-medium tracking-wide uppercase">
+                  {t('hero.greeting')}
+                </p>
+                
+                <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+                  <span className="text-gray-900 dark:text-white">Théo</span>
+                  <br />
+                  <span className="text-gray-900 dark:text-white">Nicod</span>
+                </h1>
+                
+                <div className="text-xl lg:text-2xl text-gray-700 dark:text-gray-300 h-8 flex items-center">
+                  <span className="text-gray-900 dark:text-white font-medium">{text}</span>
+                  <span className="animate-pulse text-gray-400 ml-1">|</span>
+                </div>
+              </div>
+
+              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg">
+                {t('hero.description')}
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <button
+                  onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-8 py-4 font-semibold hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 border border-gray-900 dark:border-white"
+                >
+                  {t('hero.cta.projects')}
+                </button>
+                
+                <button
+                  onClick={() => document.getElementById('resume')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white px-8 py-4 font-semibold hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all duration-300"
+                >
+                  {t('hero.cta.resume')}
+                </button>
+              </div>
             </div>
           </div>
 
-          <p className="text-xl text-gray-400 leading-relaxed max-w-lg">
-            Étudiant passionné en Master Informatique, je crée des expériences 
-            numériques innovantes qui repoussent les limites du possible.
-          </p>
+          {/* Right side - Professional photo section */}
+          <div className="lg:order-2 order-1 relative">
+            <div className="relative max-w-md mx-auto">
+              
+              {/* Main photo container */}
+              <div className="relative">
+                <div className="w-80 h-80 mx-auto bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-500 dark:text-gray-400 text-lg font-medium overflow-hidden">
+                  {/* Remplacer par votre photo professionnelle */}
+                  <img 
+                    src="/path/to/your/photo.jpg" 
+                    alt="Théo Nicod" 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                    }}
+                  />
+                  <div className="hidden flex items-center justify-center text-gray-500 dark:text-gray-400">
+                    
+                  </div>
+                </div>
+                
+                {/* Subtle geometric accent */}
+                <div className="absolute -top-4 -right-4 w-16 h-16 bg-gray-900 dark:bg-white"></div>
+                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gray-300 dark:bg-gray-700"></div>
+              </div>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <button
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105"
-            >
-              <span className="flex items-center justify-center space-x-2">
-                <Code2 className="w-5 h-5" />
-                <span>Voir mes créations</span>
-              </span>
-            </button>
-            
-            <button
-              onClick={() => document.getElementById('resume')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group border-2 border-gray-600 text-gray-300 px-8 py-4 rounded-2xl font-semibold hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300 transform hover:scale-105"
-            >
-              <span className="flex items-center justify-center space-x-2">
-                <Zap className="w-5 h-5" />
-                <span>Mon parcours</span>
-              </span>
-            </button>
-          </div>
-        </div>
-
-        {/* Right side - Visual element */}
-        <div className="lg:order-2 order-1 relative">
-          <div className="relative w-80 h-80 mx-auto">
-            {/* Animated rings */}
-            <div className="absolute inset-0 rounded-full border-2 border-cyan-500/30 animate-spin-slow"></div>
-            <div className="absolute inset-4 rounded-full border-2 border-purple-500/30 animate-spin-reverse"></div>
-            <div className="absolute inset-8 rounded-full border-2 border-pink-500/30 animate-spin-slow"></div>
-            
-            {/* Center avatar */}
-            <div className="absolute inset-16 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-6xl font-bold shadow-2xl">
-              JD
-            </div>
-            
-            {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center text-white animate-float">
-              <Code2 className="w-8 h-8" />
-            </div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-white animate-float-delayed">
-              <Sparkles className="w-8 h-8" />
+              {/* Social links */}
+              <div className="flex justify-center space-x-6 mt-8">
+                <a 
+                  href="#"
+                  target='_self'
+                  onClick={(e) => {
+                    e.preventDefault();
+                    sendEmail();
+                  }}
+                  rel="noopener noreferrer"
+                  className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                  <Mail className="w-6 h-6" />
+                </a>
+                <a 
+                  href="https://github.com/TheoNicod"
+                  target='_blank'
+                  rel="noopener noreferrer"
+                  className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                  <Github className="w-6 h-6" />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/th%C3%A9o-nicod-b21b36273/" 
+                  target='_blank'
+                  rel="noopener noreferrer"
+                  className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                  <Linkedin className="w-6 h-6" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -116,10 +153,10 @@ const Hero: React.FC = () => {
 
       {/* Scroll indicator */}
       <button
-        onClick={scrollToAbout}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 hover:text-cyan-400 transition-colors animate-bounce"
+        onClick={scrollToProjects}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors lg:block hidden"
       >
-        <ArrowDown size={32} />
+        <ArrowDown size={24} />
       </button>
     </section>
   );

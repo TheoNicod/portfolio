@@ -1,0 +1,206 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "resume": "CV"
+  },
+  "theme": {
+    "lightMode": "Mode clair",
+    "darkMode": "Mode sombre"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "name": "Théo",
+    "lastName": "Nicod",
+    "roles": ["Développement", "Intelligence artificielle", "Projet"],
+    "description": "Étudiant Master Informatique, j'allie développement en intelligence artificielle et organisation de projets.",
+    "cta": {
+      "projects": "Voir mes créations",
+      "resume": "Mon parcours"
+    }
+  },
+  "about": {
+    "title": {
+      "first": "Qui suis-",
+      "second": "je ?"
+    },
+    "story": {
+      "title": "Mon Histoire",
+      "paragraphs": [
+        "Passionné par l'informatique depuis mon plus jeune âge, j'ai découvert le pouvoir transformateur de la technologie. Actuellement en Master Informatique, je me spécialise dans le développement d'applications web et mobile innovantes.",
+        "Mon approche combine créativité artistique et rigueur technique pour créer des expériences numériques qui marquent les esprits. Chaque projet est une opportunité d'explorer de nouveaux horizons technologiques."
+      ]
+    },
+    "education": {
+      "title": "Formation",
+      "master": {
+        "title": "Master Informatique",
+        "period": "2023 - 2025",
+        "school": "Université XYZ",
+        "description": "Spécialisation en Intelligence Artificielle et Développement Web Avancé"
+      },
+      "bachelor": {
+        "title": "Licence Informatique",
+        "period": "2020 - 2023",
+        "school": "Université XYZ",
+        "description": "Formation complète en programmation, algorithmique et systèmes"
+      }
+    },
+    "values": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "Toujours à la recherche de solutions créatives et avant-gardistes"
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Optimisation constante pour des expériences utilisateur exceptionnelles"
+      },
+      "precision": {
+        "title": "Précision",
+        "description": "Attention méticuleuse aux détails dans chaque ligne de code"
+      },
+      "learning": {
+        "title": "Apprentissage",
+        "description": "Curiosité permanente et adaptation aux nouvelles technologies"
+      }
+    },
+    "skills": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "mobile": "Mobile",
+      "tools": "Outils"
+    }
+  },
+  "projects": {
+    "title": {
+      "0": "Mes ",
+      "1": "Créations"
+    },
+    "subtitle": "Découvrez mes projets les plus innovants",
+    "featured": "Featured",
+    "cta": "Intéressé par une collaboration ?",
+    "ctaButton": "Contactez-moi",
+    "buttons": {
+      "code": "Code",
+      "view": "Voir",
+      "paper": "En savoir plus"
+    },
+    "list": {
+      "goelan": {
+        "subtitle": "Chatbot IA pour l'orientation étudiante",
+        "description": "Agent conversationnel dédié à l'orientation, augmenté par des informations contextuelles propres à l'environnement universitaire grâce au Retrieval Augmented Generation (RAG)."
+      },
+      "llm-personalization": {
+        "subtitle": "Personnalisation et déploiement de modèles de langage",
+        "description": "Découverte et application des différents types de personnalisation de modèles de langage : prompting, RAG et fine-tuning."
+      },
+      "aruco": {
+        "subtitle": "Réalité augmentée ArUco : visualisation 3D de poumons infectés à partir de radiographies thoraciques",
+        "description": "Réalité augmentée permettant de visualiser des modèles 3D de poumons à partir de radiographies thoraciques d'infections pulmonaires. Le système utilise des marqueurs ArUco pour détecter et superposer les modèles 3D en temps réel sur les images."
+      },
+      "nutritrack": {
+        "subtitle": "Gestion de l'alimentation",
+        "description": "NutriTrack est une application de suivi alimentaire. Enregistrez vos repas, suivez votre nutrition et améliorez vos habitudes alimentaires pour une vie plus saine."
+      }
+    }
+  },
+  "resume": {
+    "title": "Mon Parcours",
+    "subtitle": "Découvrez mon évolution professionnelle et mes accomplissements",
+    "downloadButton": "Télécharger CV Complet",
+    "contact": {
+      "title": "Contact"
+    },
+    "skills": {
+      "title": "Compétences",
+      "category": {
+        "language_prog": "Langages de programmation",
+        "ai": "IA",
+        "tools": "Outils",
+        "language": {
+          "title": "Langues",
+          "french": {
+            "title": "Français",
+            "level": "Natif"
+          },
+          "english": {
+            "title": "Anglais",
+            "level": "B1-B2"
+          }
+        }
+      }
+    },
+    "experience": {
+      "title": "Expériences Professionnelles",
+      "list": {
+        "goelan": {
+          "title": "Développeur IA",
+          "company": "NCU ÉLAN",
+          "period": "Fév. 2025 - Déc. 2025",
+          "description": "Création d'une solution d'agent conversationnel basée sur l'IA pour l'Université de Haute-Alsace. Développement d'un chatbot intelligent spécialisé dans l'orientation étudiante, permettant d'accompagner les étudiants dans leurs parcours académiques et leurs choix de formation."
+        },
+        "unsolite": {
+          "title": "Stagiaire Développeur Full-Stack",
+          "company": "Unsolite",
+          "period": "Avr. 2023 - Juil. 2023",
+          "description": "Intégration continue et développement d'une solution SaaS de gestion d'événements. Implémentation de fonctionnalités incluant la visualisation 3D, la gestion par QR codes et un système de chat en temps réel via WebSockets."
+        }
+      }
+    },
+    "education": {
+      "title": "Formations",
+      "master": {
+        "title": "Master Informatique et Mobilité",
+        "place": "Université de Haute-Alsace, Mulhouse, France",
+        "period": "2025",
+        "description": "",
+        "courses": [
+          "Algorithmique géometrique",
+          "Analyse et modélisation de scènes 2D 3D",
+          "Cloud computing",
+          "Développement web",
+          "Génie logiciel",
+          "Image sur plateforme mobile",
+          "Informatique décisionnelle",
+          "Optimisation combinatoire",
+          "Programmation nouvelles technologies",
+          "Science des données",
+          "Sécurité et sûreté",
+          "Systèmes et réseaux",
+          "Techniques de recherche et applications",
+          "Technologies de l'entreprise"
+        ]
+      },
+      "bachelor": {
+        "title": "Licence Informatique",
+        "place": "Université de Franche-Comté, Besançon, France",
+        "period": "2023",
+        "description": "",
+        "courses": [
+          "Algorithmie",
+          "Analyse et modélisation",
+          "Analyse syntaxique",
+          "Apprentissage automatique",
+          "Architecture des ordinateurs",
+          "Base de données",
+          "Mathématiques",
+          "Programmation orientée objet, fonctionnelle et multi-paradigme",
+          "Réseau",
+          "Science pour l'ingénieur",
+          "Théorie des langages",
+          "Web"
+        ]
+      },
+      "bac": {
+        "title": "Baccalauréat Scientifique",
+        "place": "Lycée Louis Pergaud, Besançon, France",
+        "period": "2019",
+        "description": "",
+        "courses": []
+      }
+    }
+  },
+  "footer": {
+    "copyright": "Tous droits réservés."
+  }
+}
