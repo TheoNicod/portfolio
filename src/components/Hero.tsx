@@ -97,10 +97,10 @@ const Hero: React.FC = () => {
               
               {/* Main photo container */}
               <div className="relative">
-                <div className="w-80 h-80 mx-auto bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-500 dark:text-gray-400 text-lg font-medium overflow-hidden">
+                <div className="w-80 h-80 mx-auto bg-white flex items-center justify-center text-gray-500 dark:text-gray-400 text-lg font-medium overflow-hidden">
                   {/* Remplacer par votre photo professionnelle */}
                   <img 
-                    src="/path/to/your/photo.jpg" 
+                    src="images/me.png" 
                     alt="Théo Nicod" 
                     className="w-full h-full object-cover"
                     onError={(e) => {

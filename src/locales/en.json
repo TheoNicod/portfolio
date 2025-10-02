@@ -14,7 +14,7 @@
     "name": "Théo",
     "lastName": "Nicod",
     "roles": ["Development", "AI", "Project"],
-    "description": "Computer Science Master's student, combining AI development and project management.",
+    "description": "Holder of a Master's degree in Computer Science, I am currently developing an AI conversational agent dedicated to student guidance.",
     "cta": {
       "projects": "View my work",
       "resume": "My journey"
@@ -137,7 +137,7 @@
         "goelan": {
           "title": "AI Developer",
           "company": "NCU ÉLAN",
-          "period": "Feb 2025 - Dec 2025",
+          "period": "Feb 2025 - Present",
           "description": "Created an AI conversational agent for student guidance at the University of Haute-Alsace. Developed an intelligent chatbot to assist students with academic orientation and educational choices."
         },
         "unsolite": {
@@ -151,8 +151,8 @@
     "education": {
       "title": "Education",
       "master": {
-        "title": "Master's in Computer Science and ",
-        "place": "University of Haute-Alsace, Besançon, France",
+        "title": "Master's in Computer Science and Mobility",
+        "place": "Université de Haute-Alsace, Mulhouse, France",
         "period": "2025",
         "description": "",
         "courses": [
@@ -174,7 +174,7 @@
       },
       "bachelor": {
         "title": "Bachelor's in Computer Science and Mobile Computing",
-        "place": "University of Franche-Comté, Besançon, France",
+        "place": "Université de Franche-Comté, Besançon, France",
         "period": "2023",
         "description": "",
         "courses": [

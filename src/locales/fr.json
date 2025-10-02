@@ -13,7 +13,7 @@
     "name": "Théo",
     "lastName": "Nicod",
     "roles": ["Développement", "Intelligence artificielle", "Projet"],
-    "description": "Étudiant Master Informatique, j'allie développement en intelligence artificielle et organisation de projets.",
+    "description": "Diplomé d'un Master Informatique, je développe actuellement un agent conversationnel IA dédié à l'orientation étudiante.",
     "cta": {
       "projects": "Voir mes créations",
       "resume": "Mon parcours"
@@ -136,7 +136,7 @@
         "goelan": {
           "title": "Développeur IA",
           "company": "NCU ÉLAN",
-          "period": "Fév. 2025 - Déc. 2025",
+          "period": "Fév. 2025 - Présent",
           "description": "Création d'une solution d'agent conversationnel basée sur l'IA pour l'Université de Haute-Alsace. Développement d'un chatbot intelligent spécialisé dans l'orientation étudiante, permettant d'accompagner les étudiants dans leurs parcours académiques et leurs choix de formation."
         },
         "unsolite": {

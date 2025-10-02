@@ -7,8 +7,8 @@ const Resume: React.FC = () => {
   const { t } = useTranslation();
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = '#';
-    link.download = 'CV_Theo_Nicod.pdf';
+    link.href = 'pdf/CV_Theo-NICOD.pdf';
+    link.download = 'CV_Theo-NICOD.pdf';
     link.click();
   };
 
