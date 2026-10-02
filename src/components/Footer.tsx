@@ -22,7 +22,6 @@ const Footer: React.FC = () => {
               <br />
             </h3>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-              -
             </p>
           </div>
           
@@ -51,7 +50,7 @@ const Footer: React.FC = () => {
           {/* Copyright */}
           <div className="border-t border-gray-800 dark:border-gray-700 pt-8 space-y-4">
             <p className="text-sm text-gray-500">
-              © 2025 Théo Nicod. {t('footer.copyright')}
+              © 2026 Théo Nicod. {t('footer.copyright')}
             </p>
           </div>
         </div>
