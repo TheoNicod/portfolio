@@ -115,27 +115,18 @@
     "skills": {
       "title": "Skills",
       "category": {
-        "language_prog": "Programming Languages",
-        "ai": "AI",
-        "tools": "Tools",
-        "language": {
-          "title": "Languages",
-          "french": {
-            "title": "French",
-            "level": "Native"
-          },
-          "english": {
-            "title": "English",
-            "level": "B1-B2"
-          }
-        }
+        "data_ai": "Data & AI",
+        "fullstack": "Full-Stack Development",
+        "infra": "Infrastructure & Deployment",
+        "business": "Business Analysis",
+        "soft_skills": "Soft Skills"
       }
     },
     "experience": {
       "title": "Professional Experiences",
       "list": {
         "goelan": {
-          "title": "AI Developer",
+          "title": "Project Manager & AI Developer",
           "company": "NCU ÉLAN",
           "period": "Feb 2025 - Present",
           "description": "Created an AI conversational agent for student guidance at the University of Haute-Alsace. Developed an intelligent chatbot to assist students with academic orientation and educational choices."
@@ -156,6 +147,7 @@
         "period": "2025",
         "description": "",
         "courses": [
+          "Generative AI & Machine Learning",
           "2D 3D Scene Analysis and Modeling",
           "Algorithms and Applications Research Techniques",
           "Cloud Computing",

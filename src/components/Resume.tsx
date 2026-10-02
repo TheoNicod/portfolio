@@ -12,36 +12,34 @@ const Resume: React.FC = () => {
     link.click();
   };
 
-  const skills = [
-    {
-      category: t('resume.skills.category.language_prog'),
-      items: ["Bash", "C", "C++", "Java", "Javascript", "PHP", "Python", "SQL"],
-      color: "from-blue-800 to-blue-700 dark:from-blue-500 dark:to-blue-600"
-    },
-    {
-      category: t('resume.skills.category.ai'), 
-      items: ["Deep Learning", "Fine-tuning", "Hugging Face", "Keras", "LangChain", "LLM", "Ollama", "Prompting", "PyTorch", "RAG", "Scikit-learn"],
-      color: "from-cyan-600 to-cyan-400 dark:from-cyan-500 dark:to-cyan-600"
-    },
-    {
-      category: "Web",
-      items: ["MongoDB", "MySQL", "NodeJs", "React", "Redis", "REST APIs", "Spring Boot", "Symfony", "Vue.js", "WebSockets"],
-      color: "from-blue-700 to-cyan-600 dark:from-blue-600 dark:to-cyan-500"
-    },
-    {
-      category: t('resume.skills.category.tools'),
-      items: ["Docker", "Git", "Google Colab", "Kubernetes"],
-      color: "from-amber-600 to-amber-700 dark:from-amber-500 dark:to-amber-600"
-    },
-    {
-      category: t('resume.skills.category.language.title'),
-      items: [
-        `${t('resume.skills.category.language.french.title')} (${t('resume.skills.category.language.french.level')})`,
-        `${t('resume.skills.category.language.english.title')} (${t('resume.skills.category.language.english.level')})`
-      ],
-      color: "from-cyan-600 to-cyan-600 dark:from-cyan-500 dark:to-cyan-600"
-    }
-  ];
+  const skills =
+    [
+      {
+        category: t('resume.skills.category.data_ai'),
+        items: ["Agentic AI", "Anthropic", "Chainlit", "Chroma", "Elasticsearch", "FAISS", "Function Calling", "Gradio", "Hugging Face", "LangChain", "LangGraph", "LangSmith", "LlamaIndex", "MCP", "Mistral AI", "NumPy", "OpenAI", "Pandas", "Prompt Engineering", "PyTorch", "RAG", "Scikit-learn", "Sécurité LLM", "Streamlit", "TensorFlow"],
+        color: "from-cyan-600 to-cyan-400 dark:from-cyan-500 dark:to-cyan-600"
+      },
+      {
+        category: t('resume.skills.category.fullstack'),
+        items: ["Express.js", "FastAPI", "JavaScript", "Node.js", "Python", "React", "REST APIs", "Three.js", "Vue.js", "Webhooks"],
+        color: "from-blue-700 to-cyan-600 dark:from-blue-600 dark:to-cyan-500"
+      },
+      {
+        category: t('resume.skills.category.infra'),
+        items: ["Docker", "Kubernetes", "n8n", "NoSQL", "SQL", "vLLM"],
+        color: "from-amber-600 to-amber-700 dark:from-amber-500 dark:to-amber-600"
+      },
+      {
+        category: t('resume.skills.category.business'),
+        items: ["Analyse métier", "Cadrage fonctionnel", "Modélisation de processus", "Spécifications techniques"],
+        color: "from-violet-700 to-violet-600 dark:from-violet-500 dark:to-violet-600"
+      },
+      {
+        category: t('resume.skills.category.soft_skills'),
+        items: ["Agilité", "Autonomie", "Claude Code", "Esprit d'équipe", "GitHub Copilot", "Gestion de projet"],
+        color: "from-emerald-600 to-emerald-500 dark:from-emerald-500 dark:to-emerald-600"
+      }
+    ];
 
   const experiences = [
     {
@@ -50,7 +48,7 @@ const Resume: React.FC = () => {
       companyLink: "https://www.elan.uha.fr/ncu-elan/",
       period: t('resume.experience.list.goelan.period'),
       description: t('resume.experience.list.goelan.description'),
-      skills: ["FastAPI", "LangChain", "MistralAI", "Python", "RAG", "React"]
+      skills: ["Agentic AI", "FastAPI", "LangChain", "MistralAI", "Python", "RAG", "Docker", "React"]
     },
     {
       title: t('resume.experience.list.unsolite.title'),
@@ -67,7 +65,7 @@ const Resume: React.FC = () => {
       title: t('resume.education.master.title'),
       logo: "M",
       place: t('resume.education.master.place'),
-      period: "2025",
+      period: "2024 - 2025",
       courses: [
         t('resume.education.master.courses.0'),
         t('resume.education.master.courses.1'),
@@ -84,7 +82,7 @@ const Resume: React.FC = () => {
       title: t('resume.education.bachelor.title'),
       logo: "L",
       place: t('resume.education.bachelor.place'),
-      period: "2023",
+      period: "2020 - 2023",
       courses: [
         t('resume.education.bachelor.courses.0'),
         t('resume.education.bachelor.courses.1'),
@@ -117,7 +115,7 @@ const Resume: React.FC = () => {
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
             {t('resume.subtitle')}
           </p>
-          
+
           {/* Download button */}
           <button
             onClick={handleDownloadCV}
@@ -144,10 +142,6 @@ const Resume: React.FC = () => {
                 </div>
                 <div className="flex items-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
                   <MapPin className="w-4 h-4 mr-4 text-gray-500 dark:text-gray-400" />
-                  <span className="text-sm">Mulhouse, France</span>
-                </div>
-                <div className="flex items-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
-                  <MapPin className="w-4 h-4 mr-4 text-gray-500 dark:text-gray-400" />
                   <span className="text-sm">Besançon, France</span>
                 </div>
               </div>
@@ -159,7 +153,7 @@ const Resume: React.FC = () => {
                 <Award className="w-5 h-5 mr-3 text-gray-600 dark:text-gray-400" />
                 {t('resume.skills.title')}
               </h3>
-              
+
               <div className="space-y-6">
                 {skills.map((skillGroup, index) => (
                   <div key={index} className="group">
@@ -169,7 +163,7 @@ const Resume: React.FC = () => {
                       </div>
                       <h4 className="text-lg font-semibold text-gray-900 dark:text-white">{skillGroup.category}</h4>
                     </div>
-                    
+
                     <div className="ml-11 flex flex-wrap gap-2">
                       {skillGroup.items.map((skill, skillIndex) => (
                         <span
@@ -194,7 +188,7 @@ const Resume: React.FC = () => {
                 <Briefcase className="w-6 h-6 mr-4 text-gray-600 dark:text-gray-400" />
                 {t('resume.experience.title')}
               </h3>
-              
+
               <div className="space-y-8">
                 {experiences.map((exp, index) => (
                   <div key={index} className="relative">
@@ -202,19 +196,19 @@ const Resume: React.FC = () => {
                     {index < experiences.length - 1 && (
                       <div className="absolute left-6 top-16 w-0.5 h-24 bg-gray-300 dark:bg-gray-600"></div>
                     )}
-                    
+
                     <div className="bg-gray-50 dark:bg-gray-800 p-6 border border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300 ml-12 relative">
                       {/* Timeline dot */}
                       <div className="absolute -left-16 top-6 w-4 h-4 bg-gray-900 dark:bg-white"></div>
-                      
+
                       <div className="flex items-center justify-between mb-3">
                         <div>
                           <h4 className="text-lg font-bold text-gray-900 dark:text-white">{exp.title}</h4>
-                          <a 
-                          href={`${exp.companyLink}`} 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-700 dark:text-gray-300 font-medium">
+                          <a
+                            href={`${exp.companyLink}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-700 dark:text-gray-300 font-medium">
                             {exp.company}
                           </a>
                         </div>
@@ -223,9 +217,9 @@ const Resume: React.FC = () => {
                           {exp.period}
                         </div>
                       </div>
-                      
+
                       <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">{exp.description}</p>
-                      
+
                       <div className="flex flex-wrap gap-2">
                         {exp.skills.map((skill, skillIndex) => (
                           <span
@@ -248,7 +242,7 @@ const Resume: React.FC = () => {
                 <GraduationCap className="w-6 h-6 mr-4 text-gray-600 dark:text-gray-400" />
                 Formation
               </h3>
-              
+
               <div className="space-y-6">
                 {education.map((ed, index) => (
                   <div key={index} className="bg-gray-50 dark:bg-gray-800 p-6 border border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
@@ -259,10 +253,13 @@ const Resume: React.FC = () => {
                       <div className="flex-1">
                         <div className="flex items-center justify-between mb-2">
                           <h4 className="text-lg font-bold text-gray-900 dark:text-white">{ed.title}</h4>
-                          <span className="text-sm text-gray-600 dark:text-gray-400">{ed.period}</span>
+                          <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                            <Calendar className="w-4 h-4 mr-2" />
+                            <span className="text-sm text-gray-600 dark:text-gray-400">{ed.period}</span>
+                          </div>
                         </div>
                         <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">{ed.place}</p>
-                        
+
                         {/* Courses */}
                         <div className="flex flex-wrap gap-2">
                           {ed.courses.map((course, courseIndex) => (

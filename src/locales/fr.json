@@ -114,29 +114,20 @@
     "skills": {
       "title": "Compétences",
       "category": {
-        "language_prog": "Langages de programmation",
-        "ai": "IA",
-        "tools": "Outils",
-        "language": {
-          "title": "Langues",
-          "french": {
-            "title": "Français",
-            "level": "Natif"
-          },
-          "english": {
-            "title": "Anglais",
-            "level": "B1-B2"
-          }
-        }
+        "data_ai": "Data & IA",
+        "fullstack": "Développement Full-Stack",
+        "infra": "Infrastructure & Déploiement",
+        "business": "Cadrage & Analyse Métier",
+        "soft_skills": "Compétences transversales"
       }
     },
     "experience": {
       "title": "Expériences Professionnelles",
       "list": {
         "goelan": {
-          "title": "Développeur IA",
+          "title": "Chef de projet & Développeur IA",
           "company": "NCU ÉLAN",
-          "period": "Fév. 2025 - Présent",
+          "period": "Fév. 2025 - Déc. 2025",
           "description": "Création d'une solution d'agent conversationnel basée sur l'IA pour l'Université de Haute-Alsace. Développement d'un chatbot intelligent spécialisé dans l'orientation étudiante, permettant d'accompagner les étudiants dans leurs parcours académiques et leurs choix de formation."
         },
         "unsolite": {
@@ -155,6 +146,7 @@
         "period": "2025",
         "description": "",
         "courses": [
+          "IA Générative & Machine Learning",
           "Algorithmique géometrique",
           "Analyse et modélisation de scènes 2D 3D",
           "Cloud computing",
