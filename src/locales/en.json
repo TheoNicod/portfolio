@@ -84,7 +84,8 @@
     "buttons": {
       "code": "Code",
       "view": "View",
-      "paper": "Learn more"
+      "paper": "Learn more",
+      "dev": "In development"
     },
     "list": {
       "goelan": {
@@ -102,6 +103,10 @@
       "nutritrack": {
         "subtitle": "Food management",
         "description": "NutriTrack is a food tracking app for detailed diet monitoring. Record meals, track nutrition, and improve eating habits for healthier living."
+      },
+       "savia": {
+        "subtitle": "Autonomous multi-agent customer support system",
+        "description": "Autonomous multi-agent customer support system: ticket qualification, source-backed RAG answers, guardrailed actions (order tracking, subscriptions) and structured human escalation."
       }
     }
   },

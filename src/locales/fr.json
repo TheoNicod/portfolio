@@ -83,7 +83,8 @@
     "buttons": {
       "code": "Code",
       "view": "Voir",
-      "paper": "En savoir plus"
+      "paper": "En savoir plus",
+      "dev": "En développement"
     },
     "list": {
       "goelan": {
@@ -101,6 +102,10 @@
       "nutritrack": {
         "subtitle": "Gestion de l'alimentation",
         "description": "NutriTrack est une application de suivi alimentaire. Enregistrez vos repas, suivez votre nutrition et améliorez vos habitudes alimentaires pour une vie plus saine."
+      },
+       "savia": {
+        "subtitle": "Système de support client multi-agent autonome",
+        "description": "Agent de support client autonome multi-agents : qualification, réponses documentées via RAG, actions sécurisées par garde-fous (suivi de commande, abonnement) et escalade humaine structurée."
       }
     }
   },

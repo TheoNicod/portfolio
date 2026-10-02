@@ -8,6 +8,17 @@ const Projects: React.FC = () => {
 
   const projects = [
     {
+      title: "Savia",
+      subtitle: t('projects.list.savia.subtitle'),
+      description: t('projects.list.savia.description'),
+      technologies: ["Multi-Agent AI", "LangChain", "LangGraph", "LangSmith", "Pydantic-ai", "FastAPI", "Ollama", "Python", "RAG", "Streamlit"],
+      image: "savia_resized.jpg",
+      date: "2026",
+      featured: true,
+      color: "from-blue-800 to-blue-900 dark:from-blue-500 dark:to-blue-700",
+      dev: true
+    },
+    {
       title: "GOELAN",
       subtitle: t('projects.list.goelan.subtitle'),
       description: t('projects.list.goelan.description'),
@@ -36,7 +47,6 @@ const Projects: React.FC = () => {
       description: t('projects.list.nutritrack.description'),
       technologies: ["PHP", "MySQL", "JQuery", "Bootstrap"],
       image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
-      github: "https://github.com/uha-fr/archiweb_2024_projets_gr04",
       date: "2024",
       featured: false,
       color: "from-amber-600 to-amber-700 dark:from-amber-500 dark:to-amber-600"
@@ -161,6 +171,14 @@ const Projects: React.FC = () => {
                         <Eye className="w-4 h-4" />
                         <span className="text-sm font-medium">{t('projects.buttons.paper')}</span>
                       </a>
+                    )}
+                    {project.dev && (
+                      <div
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white px-4 py-2 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all duration-300 relative z-50"
+                      >
+                        <div className="text-sm font-medium">{t('projects.buttons.dev')}</div>
+                      </div>
                     )}
                   </div>
                 </div>
