@@ -13,8 +13,8 @@
     "greeting": "Hello, I'm",
     "name": "Théo",
     "lastName": "Nicod",
-    "roles": ["Development", "AI", "Project"],
-    "description": "Holder of a Master's degree in Computer Science, I am currently developing an AI conversational agent dedicated to student guidance.",
+    "roles": ["Agentic AI", "Data sovereignty", "Continuous learning"],
+    "description": "AI Developer with a Master's degree in Computer Science, with skills spanning software development, Generative AI, Web and Cloud. Hands-on production experience: LLM deployment on local infrastructure, RAG pipelines and monitoring. Curious and constantly keeping up with AI developments, I am looking for an environment where technical AI challenges have real-world impact.",
     "cta": {
       "projects": "View my work",
       "resume": "My journey"

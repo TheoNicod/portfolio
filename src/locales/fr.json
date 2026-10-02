@@ -12,8 +12,8 @@
     "greeting": "Bonjour, je suis",
     "name": "Théo",
     "lastName": "Nicod",
-    "roles": ["Développement", "Intelligence artificielle", "Projet"],
-    "description": "Diplomé d'un Master Informatique, je développe actuellement un agent conversationnel IA dédié à l'orientation étudiante.",
+    "roles": ["Agents IA", "Souveraineté des données", "Apprentissage continu"],
+    "description": "Développeur IA titulaire d'un Master 2 Informatique, avec des compétences couvrant le développement logiciel, l’IA Générative, le Web et le Cloud. Expérience concrète en production : déploiement de LLM sur infrastructure locale, pipelines RAG et monitoring. Curieux et en veille constante sur les évolutions de l'IA, je cherche un environnement où les défis techniques IA sont utiles.",
     "cta": {
       "projects": "Voir mes créations",
       "resume": "Mon parcours"
